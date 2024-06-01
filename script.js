@@ -9,7 +9,7 @@ const searchCity = document.querySelector('#search-city')
 
 async function fetchData(url) {
     try {
-        const response = await fetch(url);
+        const response = await fetch(url, { mode: 'cors' });
 
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status} = ${response.statusText}`);
